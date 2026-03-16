@@ -3,6 +3,10 @@
 using namespace std;
 
 int main() {
-    cout << "Hello World!" << endl;
+    int age {2};
+
+    age = 4;
+
+    cout << age << endl;
     cout << "What!";
 }
