@@ -3,6 +3,5 @@
 using namespace std;
 
 int main() {
-    cout << "Hello World!";
-    cout << "\nHello World!" << endl;
+    cout << 1.0 / 3.0 << endl;
 }
