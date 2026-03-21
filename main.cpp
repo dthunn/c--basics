@@ -1,10 +1,8 @@
 #include <iostream>
-#include <cctype>
-#include <cstring>
+#include <fmt/core.h>
 
 using namespace std;
 
 int main() {
-    cout << std::boolalpha;
-    cout << ("A" > "a");
+    fmt::print("Hello from fmt! {} + {} = {}\n", 1, 2, 3);
 }

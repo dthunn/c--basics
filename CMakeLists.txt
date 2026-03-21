@@ -1,6 +1,10 @@
-cmake_minimum_required(VERSION 4.1)
+cmake_minimum_required(VERSION 3.20)
+set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake")
 project(basics)
 
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(basics main.cpp)
+
+find_package(fmt CONFIG REQUIRED)
+target_link_libraries(basics PRIVATE fmt::fmt)
