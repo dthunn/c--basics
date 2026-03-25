@@ -5,5 +5,14 @@
 using namespace std;
 
 int main() {
-    cout << add(1, 2) << endl;
+    int score {100};
+    int *score_ptr {&score};
+
+    cout << score_ptr << endl;
+    cout << *score_ptr << endl;
+
+    *score_ptr = 200;
+
+    cout << *score_ptr << endl;
+    cout << score << endl;
 }
