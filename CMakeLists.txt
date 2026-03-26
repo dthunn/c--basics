@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(basics src/main.cpp
         src/add.cpp
-        src/add.h)
+        src/player.cpp)
 
 find_package(fmt CONFIG REQUIRED)
 target_link_libraries(basics PRIVATE fmt::fmt)

@@ -1,18 +1,16 @@
 #include <iostream>
-#include <fmt/core.h>
-#include "add.h"
-
-using namespace std;
+#include <memory>
+#include "player.h"
 
 int main() {
-    int score {100};
-    int *score_ptr {&score};
+    auto dylan = std::make_unique<Player>("Dylan", 100, 0);
+    auto enemy = std::make_unique<Player>("Goblin", 50, 0);
 
-    cout << score_ptr << endl;
-    cout << *score_ptr << endl;
+    std::vector<std::unique_ptr<Player>> players;
+    players.push_back(std::move(dylan));
+    players.push_back(std::move(enemy));
 
-    *score_ptr = 200;
-
-    cout << *score_ptr << endl;
-    cout << score << endl;
+    for (const auto& player : players) {
+        std::cout << player->getName() << std::endl;
+    }
 }
