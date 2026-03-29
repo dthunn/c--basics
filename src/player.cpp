@@ -1,5 +1,4 @@
 #include "player.h"
-
 #include <utility>
 
 Player::Player(std::string n, int h, int x)
@@ -9,6 +8,6 @@ void Player::talk(std::string msg) {
     // TODO
 }
 
-bool Player::is_dead() {
+bool Player::is_dead() const {
     return health <= 0;
 }

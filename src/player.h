@@ -19,5 +19,5 @@ class Player {
         void setXp(int x) { xp = (x < 0) ? 0 : x; }
 
         void talk(std::string);
-        bool is_dead();
+        [[nodiscard]] bool is_dead() const;
 };
