@@ -4,7 +4,7 @@
 Player::Player(std::string n, int h, int x)
     : name{std::move(n)}, health{h}, xp{x} {}
 
-void Player::talk(std::string msg) {
+void Player::talk(const std::string& msg) {
     // TODO
 }
 

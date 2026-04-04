@@ -18,6 +18,6 @@ class Player {
         void setHealth(int h) { health = (h < 0) ? 0 : h; }
         void setXp(int x) { xp = (x < 0) ? 0 : x; }
 
-        void talk(std::string);
+        void talk(const std::string&);
         [[nodiscard]] bool is_dead() const;
 };
