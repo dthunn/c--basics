@@ -5,7 +5,7 @@ Player::Player(std::string n, int h, int x)
     : name{std::move(n)}, health{h}, xp{x} {}
 
 void Player::talk(const std::string& msg) {
-    // TODO
+
 }
 
 bool Player::is_dead() const {
