@@ -2,11 +2,13 @@
 #include <string>
 
 class Player {
-    std::string name;
+
+
+    public:
+        std::string name;
         int health {};
         int xp {};
 
-    public:
         Player() = default;
         Player(std::string n, int h, int x);
 
