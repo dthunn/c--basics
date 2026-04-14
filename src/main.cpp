@@ -1,16 +1,13 @@
 #include <iostream>
-#include <memory>
 #include "player.h"
+#include "super_player.h"
 
 int main() {
-    // auto dylan = std::make_unique<Player>("Dylan", 100, 0);
-    // auto enemy = std::make_unique<Player>("Goblin", 50, 0);
-    std::vector<Player> players;
-    players.emplace_back("Dylan", 100, 0);
-    players.emplace_back("Goblin", 50, 0);
-    // players.push_back(std::move(enemy));
+    Player dylan{"Dylan", 100, 0};
+    std::cout << dylan.getName() << " (health: " << dylan.getHealth() << ")\n";
 
-    for (auto& player : players) {
-        std::cout << player.getName() << std::endl;
-    }
+    SuperPlayer hero{"SuperDylan", 200, 50, 5};
+    std::cout << hero.getName() << " (health: " << hero.getHealth()
+              << ", level: " << hero.getLevel() << ")\n";
+    hero.superAttack();
 }

@@ -2,17 +2,18 @@
 #include <string>
 
 class Player {
+protected:
     std::string name;
-        int health {};
-        int xp {};
+    int health {};
+    int xp {};
 
     public:
         Player() = default;
         Player(std::string n, int h, int x);
 
-        [[nodiscard]] std::string getName() const { return name; }
-        [[nodiscard]] int getHealth() const { return health; }
-        [[nodiscard]] int getXp() const { return xp; }
+        [[nodiscard]] std::string getName() { return name; }
+        [[nodiscard]] int getHealth() const  { return health; }
+        [[nodiscard]] int getXp() const  { return xp; }
 
         void setName(std::string n) { name = std::move(n); }
         void setHealth(int h) { health = (h < 0) ? 0 : h; }
